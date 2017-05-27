@@ -1,0 +1,20 @@
+{
+  "name": "quoratecloud",
+  "description": "A social platform",
+  "main": "index.js",
+  "authors": [
+    "mozartted"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.2.0"
+  }
+}
