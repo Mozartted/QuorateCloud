@@ -44,6 +44,7 @@ var paths = {
   ],
   // These files are for your app's JavaScript
   appJS: [
+    'client/assets/js/modernizer.custom.js',
     'client/assets/js/app.js'
   ]
 }
@@ -78,16 +79,16 @@ gulp.task('copy', function() {
 
 // Compiles the Foundation for Apps directive partials into a single JavaScript file
 gulp.task('copy:foundation', function(cb) {
-  gulp.src('node_modules/foundation-apps/js/angular/components/**/*.html')
-    .pipe($.ngHtml2js({
-      prefix: 'components/',
-      moduleName: 'foundation',
-      declareModule: false
-    }))
-    .pipe($.uglify())
-    .pipe($.concat('templates.js'))
-    .pipe(gulp.dest('./build/assets/js'))
-  ;
+  // gulp.src('node_modules/foundation-apps/js/angular/components/**/*.html')
+  //   .pipe($.ngHtml2js({
+  //     prefix: 'components/',
+  //     moduleName: 'foundation',
+  //     declareModule: false
+  //   }))
+  //   .pipe($.uglify())
+  //   .pipe($.concat('templates.js'))
+  //   .pipe(gulp.dest('./build/assets/js'))
+  // ;
 
   // Iconic SVG icons
   gulp.src('./node_modules/foundation-apps/iconic/**/*')
@@ -116,7 +117,7 @@ gulp.task('sass', function () {
 });
 
 // Compiles and copies the Foundation for Apps JavaScript, as well as your app's custom JS
-gulp.task('uglify', ['uglify:foundation', 'uglify:app'])
+gulp.task('uglify', ['uglify:foundation', 'uglify:app']);
 
 gulp.task('uglify:foundation', function(cb) {
   var uglify = $.if(isProduction, $.uglify()
@@ -168,7 +169,7 @@ gulp.task('default', ['server'], function () {
   gulp.watch(['./client/assets/scss/**/*', './scss/**/*'], ['sass']);
 
   // Watch JavaScript
-  gulp.watch(['./client/assets/js/**/*', './js/**/*'], ['uglify:app']);
+  gulp.watch(['./client/assets/js/**/*'], ['uglify:app']);
 
   // Watch static files
   gulp.watch(['./client/**/*.*', '!./client/templates/**/*.*', '!./client/assets/{scss,js}/**/*.*'], ['copy']);
