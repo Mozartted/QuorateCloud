@@ -3,20 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation for Apps</title>
+    <title>Quorate</title>
     <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
     <script src="./assets/js/foundation.js"></script>
-    <script src="./assets/js/app.js"></script>
+
   </head>
   <body>
-    <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a><strong>Foundation for Apps</strong></a></li>
-        </ul>
+    <!-- the header component lined out, logo in the middle  -->
+    <div class=" menu-bar header">
+      <div>
+        Quorate
       </div>
-      <div ui-view class="grid-content">
+    </div>
+
+    <!-- grid components would be in here, nothing working for the grid -->
+    <!-- a central log screen for the logo with custom input buttons  -->
+    <div class="grid-block">
+      <div id="central" class="medium-12 grid-block">
+        <div id="quorate-login" class="login card card--bem card--bem-green">
+            <!-- image asset -->
+            <div class="card-section center"><h3 class="heading--title">Quorate</h3></div>
+            <!-- <img src="./assets/img/lock.png" class="login--image center" style="width:130px" /> -->
+            <div class="card-section">
+              <section class="section">
+        				<form id="theForm" class="simform" autocomplete="off">
+        					<div class="simform-inner">
+        						<ol class="questions">
+        							<li>
+        								<span><label for="q1">What's your Email</label></span>
+        								<input id="q1" name="q1" type="text"/>
+        							</li>
+        							<li>
+        								<span><label for="q2">What's your Password</label></span>
+        								<input id="q2" name="q2" type="text"/>
+        							</li>
+        						</ol><!-- /questions -->
+        						<button class="submit" type="submit">Submit</button>
+        						<div class="controls">
+        							<button class="next"></button>
+        							<div class="progress"></div>
+        							<span class="number">
+        								<span class="number-current"></span>
+        								<span class="number-total"></span>
+        							</span>
+        							<span class="error-message"></span>
+        						</div><!-- / controls -->
+        					</div><!-- /simform-inner -->
+        					<span class="final-message"></span>
+        				</form><!-- /simform -->
+        			</section>
+        			<section class="related">
+        				<div class="section">
+                  <button class="button button--wide button--wide-blue">Sign in with Facebook</button>
+                </div>
+                <div class="section">
+                  <button class="button button--wide button--wide-red">Sign in with Google</button>
+                </div>
+                <div></div>
+        			</section>
+            </div>
+
+        </div>
+
+
       </div>
     </div>
   </body>
+  <script src="./assets/js/app.js"></script>
+  <script>
+  var theForm = document.getElementById( 'theForm' );
+
+  new stepsForm( theForm, {
+    onSubmit : function( form ) {
+      // hide form
+      classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+      /*
+      form.submit()
+      or
+      AJAX request (maybe show loading indicator while we don't have an answer..)
+      */
+
+      // let's just simulate something...
+      var messageEl = theForm.querySelector( '.final-message' );
+      messageEl.innerHTML = 'Loading';
+      classie.addClass( messageEl, 'show' );
+    }
+  } );
+  </script>
 </html>
