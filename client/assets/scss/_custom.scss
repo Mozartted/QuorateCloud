@@ -11,6 +11,15 @@ $base-color:#F4F7F6;
 $latoFont:"Lato",sans-serif;
 $green-base:#26C281;
 $green-base-dark:#22AF74;
+$green-base-darker:#1f8a5e;
+
+// font sizes sections
+$small-text:1em;
+$medium-text:2em;
+$large-text:3em;
+$medium-text--medium:1.7em;
+
+//
 
 // following bem here
 .header{
@@ -20,6 +29,59 @@ $green-base-dark:#22AF74;
   padding:15px;
   color: $base-color
 }
+
+.header--title{
+  font-size: $medium-text;
+}
+
+.header--subsec{
+  float: right;
+  padding:5px;
+  width: 100%;
+}
+
+.header--search{
+  float: right;
+}
+
+.header--search-text{
+  padding:15px 15px;
+  background:rgba(50, 50, 50, 0.2);
+  border:0px solid #dbdbdb;
+  width: 500px;
+  transition: 0.3s ease 0.3s;
+}
+
+.header--search-text:hover{
+  background: #202020;
+}
+
+.header--search-text:focus{
+  background: #202020;
+}
+
+.header--search-label{
+  position:relative;
+  padding:14px 15px;
+  right:-8px;
+  border:2px solid $green-base-darker;
+  background-color:$green-base-darker;
+  color:#fafafa;
+}
+
+
+
+.header--user{
+  float:right;
+  font-family: $latoFont;
+  margin:0px 2em 0em 2em;
+}
+
+.header--user-icon{
+  width: 3em;
+  height:3em;
+}
+
 
 .login{
   width: 454px;
@@ -97,11 +159,138 @@ $green-base-dark:#22AF74;
 // card components
 .card--bem{
   font-family: $latoFont;
+  margin: 5px;
 }
 
 .card--bem-green{
   background: $green-base;
   color: #ffffff;
+}
+
+.card--bem-wide{
+  width:100%;
+  margin: 16px;
+}
+
+.quorate__container{
+  max-width: 92%;
+  margin: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.profile-image--block{
+  padding:30px;
+  align-items: center;
+}
+
+.profile-image--img{
+  border-radius: 50%
+}
+
+.profile-image-central{
+  width:5em;
+  margin: auto;
+}
+
+.profile-info--title{
+  color: $alternate-color;
+  font-family: $latoFont;
+  font-size:$medium-text--medium;
+  margin: auto;
+  width:80%;
+  text-align: center;
+  padding: 15px;
+}
+
+.profile-info--description{
+  color: $alternate-color;
+  font-family: $latoFont;
+  font-size:$small-text;
+  margin: auto;
+  width:80%;
+  padding:25px;
+  border-top: 1px solid #ededed;
+  text-align: center;
+}
+
+.profile-info--communities{
+  color: $alternate-color;
+  font-family: $latoFont;
+  margin: auto;
+  width:80%;
+  padding:25px;
+  border-top: 1px solid #ededed;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+// the questions and topics start here
+.topic{
+  font-size: $medium-text--medium;
+  font-family: $latoFont;
+  color: $alternate-color;
+  padding: 15px;
+}
+
+.description{
+  font-size: $small-text;
+  font-family: $latoFont;
+  color: $alternate-color;
+  padding: 15px;
+}
+
+.icon--quest-side{
+  padding: 10px;
+  margin:1em;
+}
+
+.icon--quest{
+  padding: 10px;
+}
+
+.categories--contain{
+  float: right;
+}
+
+.categories--quest{
+  border: 1px solid #ededed;
+  padding: 3px;
+  font-size: 0.8em;
+  float: left;
+  margin: 3px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.card>img, .profile-image--img-wide{
+  width:inherit !important;
+  height:inherit;
+}
+
+
+// extras for things like plave holders
+::-webkit-input-placeholder { /* For WebKit browsers */
+    color:    $base-color;
+                font-family:$latoFont;
+                font-weight:bold;
+}
+:-moz-placeholder { /* For Mozilla Firefox 4 to 18 */
+    color:    $base-color;
+                font-family:$latoFont;;
+                font-weight:bold;
+}
+::-moz-placeholder { /* For Mozilla Firefox 19+ */
+    color:   $base-color;
+                font-family:$latoFont;
+                font-weight:bold;
+}
+:-ms-input-placeholder { /* For Internet Explorer 10+ */
+    color:    $base-color;
+                font-family:$latoFont;
+                font-weight:bold;
 }
 // end of the bem guys
 
