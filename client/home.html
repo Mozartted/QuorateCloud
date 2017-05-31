@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quorate</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+
+  </head>
+  <body>
+    <!-- the header component lined out, logo in the middle  -->
+    <div class=" menu-bar header">
+      <div class="medium-4 grid-block">
+        <div class="header--title">
+          Quorate
+        </div>
+      </div>
+      <div class="medium-8 grid-block">
+        <div class="header--subsec">
+          <div class="header--user">
+            <div class="header--user-icon">
+              <img class="profile-image--img profile-image--img-wide" src="./assets/img/iconic/person.svg" />
+            </div>
+          </div>
+          <div class="header--search">
+            <div>
+              <span class="header--search-label">Search</span>
+              <input class="header--search-text" placeholder="Enter your search term" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- grid components would be in here, nothing working for the grid -->
+    <!-- a central log screen for the logo with custom input buttons  -->
+    <div class="grid-block">
+      <div id="central" class="quorate__container grid-block" >
+        <!-- three set of columns card flow -->
+
+        <!-- social block- profile name and information -->
+        <div class="medium-3 grid-block hide-for-small-only" style="display: block !important;">
+          <div id="quorate-login" class="card card--bem card--bem-wide">
+              <!-- image asset -->
+              <div class="card-section center profile-image--block">
+                <!-- the user's image and block layout -->
+                <div class="profile-image-central">
+                  <img class="profile-image--img profile-image--img-wide" src="./assets/img/iconic/person.svg"/>
+                </div>
+                <div class="profile-info--title">
+                  Osita Chibuike
+                </div>
+                <div class="profile-info--description">
+                  A coder from futo
+                </div>
+                <div class="profile-info--communities">
+                  <span class="categories--quest">
+                    Futo
+                  </span>
+                  <span class="categories--quest">
+                    WeCode
+                  </span>
+                  <span class="categories--quest">
+                    Drama
+                  </span>
+                  <span class="categories--quest">
+                    Futo
+                  </span>
+                  <span class="categories--quest">
+                    WeCode
+                  </span>
+                  <span class="categories--quest">
+                    Drama
+                  </span>
+                </div>
+              </div>
+          </div>
+
+        </div>
+        <div class="small-12 medium-6 grid-block" style="display: block;">
+          <!-- this is the question component -->
+          <div id="quorate-login" class="card card--bem-wide card--bem">
+              <div class="card-section grid-block">
+                <!-- reactions here -->
+                <div class="medium-2 grid-block" style="display:block">
+                  <div class="medium-12 grid-block">
+                    <span class="icon--quest-side">
+                      upvote
+                    </span>
+                  </div>
+                  <div class="medium-12 grid-block">
+                    <span class="icon--quest-side">
+                      downvote
+                    </span>
+                  </div>
+                </div>
+                <!-- question here -->
+                <div class="medium-10 grid-block" style="display:block">
+                  <div class="medium-12 grid-block">
+                    <span class="topic">
+                      Question goes here, most likely questions seeking suggestions
+                    </span>
+                  </div>
+                  <div class="medium-12 grid-block">
+                    <span class="description">
+                      long descriptions go in here, could have done the whole Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                    </span>
+                  </div>
+                  <div class="medium-12 grid-block">
+                    <span class="icon--quest">
+                      60 like
+                    </span>
+                    <span class="icon--quest">
+                      44 dislike
+                    </span>
+                    <span class="icon--quest">
+                      20 indifferent
+                    </span>
+                  </div>
+                  <!-- categories belonging to -->
+                  <div class="medium-12 grid-block categories--contain">
+                    <span class="categories--quest">
+                      Futo
+                    </span>
+                    <span class="categories--quest">
+                      WeCode
+                    </span>
+                    <span class="categories--quest">
+                      Drama
+                    </span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- end of the question component -->
+          <!-- this is the question component -->
+          <div id="quorate-login" class="card card--bem-wide card--bem">
+              <div class="card-section grid-block">
+                <!-- reactions here -->
+                <div class="medium-2 grid-block" style="display:block">
+                  <div class="medium-12 grid-block">
+                    <span class="icon--quest-side">
+                      upvote
+                    </span>
+                  </div>
+                  <div class="medium-12 grid-block">
+                    <span class="icon--quest-side">
+                      downvote
+                    </span>
+                  </div>
+                </div>
+                <!-- question here -->
+                <div class="medium-10 grid-block" style="display:block">
+                  <div class="medium-12 grid-block">
+                    <span class="topic">
+                      Question goes here, most likely questions seeking suggestions
+                    </span>
+                  </div>
+                  <div class="medium-12 grid-block">
+                    <span class="description">
+                      long descriptions go in here, could have done the whole Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                    </span>
+                  </div>
+                  <div class="medium-12 grid-block">
+                    <span class="icon--quest">
+                      60 like
+                    </span>
+                    <span class="icon--quest">
+                      44 dislike
+                    </span>
+                    <span class="icon--quest">
+                      20 indifferent
+                    </span>
+                  </div>
+                  <!-- categories belonging to -->
+                  <div class="medium-12 grid-block categories--contain">
+                    <span class="categories--quest">
+                      Futo
+                    </span>
+                    <span class="categories--quest">
+                      WeCode
+                    </span>
+                    <span class="categories--quest">
+                      Drama
+                    </span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- end of the question component -->
+
+
+        </div>
+        <div class="medium-3 grid-block hide-for-small-only" style="    display: block !important;">
+          <div id="quorate-login" class="card card--bem-wide card--bem">
+            <div class="card-section">
+              <div class="medium-12 grid-block">
+                <span class="topic">
+                  Communities you may like
+                </span>
+              </div>
+              <div class="medium-12 grid-block">
+                <span class="categories--quest">
+                  Futo
+                </span>
+                <span class="categories--quest">
+                  WeCode
+                </span>
+                <span class="categories--quest">
+                  Drama
+                </span>
+                <span class="categories--quest">
+                  Futo
+                </span>
+                <span class="categories--quest">
+                  WeCode
+                </span>
+                <span class="categories--quest">
+                  Drama
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/app.js"></script>
+  <!-- <script>
+  var theForm = document.getElementById( 'theForm' );
+
+  new stepsForm( theForm, {
+    onSubmit : function( form ) {
+      // hide form
+      classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+      /*
+      form.submit()
+      or
+      AJAX request (maybe show loading indicator while we don't have an answer..)
+      */
+
+      // let's just simulate something...
+      var messageEl = theForm.querySelector( '.final-message' );
+      messageEl.innerHTML = 'Loading';
+      classie.addClass( messageEl, 'show' );
+    }
+  } );
+  </script> -->
+</html>
